@@ -1,0 +1,110 @@
+body{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 300ms;
+  width: 100vw;
+  font-family: Mask2;
+}
+
+@font-face {
+  font-family: 'Berenika';
+  src: url('./assets/Klaudia and Berenika/Berenika/Berenika.ttf') format('truetype');
+  src: url('./assets/Klaudia and Berenika/Berenika/Berenika-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Klaudia';
+  src: url('./assets/Klaudia and Berenika/Berenika/Klaudia.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Aneo';
+  src: url('./assets/Fonts/Aneo/Aneo-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Wask';
+  src: url('./assets/Fonts/WASK/wask_new-webfont.eot') format('embedded-opentype'),
+}
+@font-face {
+  font-family: 'Mask2';
+  src: url(./assets/Fonts/static/MPLUS2-Bold.ttf) format('truetype');
+}
+
+/* button styling */
+.custom-button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  --border-right: 6px;
+  --text-stroke-color: var(--primary-color);
+  --animation-color: var(--primary-color); 
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  background-color: rgba(0, 0, 0, 0.699);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.custom-button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+
+.rotateIn {
+  animation: rotateIn 0.8s ease-in forwards;
+}
+
+@keyframes rotateIn {
+  0% { 
+    /* opacity: 0; */
+    transform: rotate(-20deg);
+  }
+  50% { 
+    /* opacity: 1; */
+    transform: rotate(10deg);
+  }
+  100% { 
+    /* opacity: 1; */
+    transform: rotate(0deg);
+  }
+}
+
+.rotateOut {
+  animation: rotateOut 0.8s ease-in forwards;
+}
+
+@keyframes rotateOut {
+  0% { 
+    /* opacity: 0; */
+    transform: rotate(20deg);
+  }
+  50% { 
+    /* opacity: 1; */
+    transform: rotate(-10deg);
+  }
+  100% { 
+    /* opacity: 1; */
+    transform: rotate(0deg);
+  }
+}
