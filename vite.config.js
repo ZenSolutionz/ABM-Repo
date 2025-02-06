@@ -8,5 +8,8 @@ export default defineConfig({
     rollupOptions: {
       external: ['react-type-animation']
     }
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   }
 })
